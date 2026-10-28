@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Login | RoyalReads</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body data-page="login">
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">R</span>Royal<span>Reads</span></a><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="catalogue.html">Catalogue</a><a href="register.html">Register</a><a href="cart.html">Cart <span class="cart-count">0</span></a></nav></header>
+  <main class="auth-layout login-layout">
+    <aside class="auth-aside"><p class="eyebrow">WELCOME BACK</p><h1>Return to a world of possibilities.</h1><p>Your next breakthrough could be one chapter away.</p><div class="auth-decoration" aria-hidden="true">✦</div></aside>
+    <section class="auth-card" aria-labelledby="login-heading"><p class="eyebrow">MEMBER ACCESS</p><h2 id="login-heading">Welcome back</h2><p class="muted">Enter details to test the login form interface.</p>
+      <form id="login-form" novalidate><label for="login-email">Email address</label><input id="login-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><label for="login-password">Password</label><input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password"><button class="btn btn-gold btn-full" type="submit">Sign In</button><p id="login-message" class="form-message" role="status" aria-live="polite"></p></form>
+      <p class="auth-switch">New to RoyalReads? <a href="register.html">Create an account</a></p><p class="security-note">This demo does not authenticate users or store passwords.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; <span data-year></span> RoyalReads</p></footer>
+</body>
+</html>

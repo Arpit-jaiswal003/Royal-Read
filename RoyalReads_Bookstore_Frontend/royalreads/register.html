@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Account | RoyalReads</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body data-page="register">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">R</span>Royal<span>Reads</span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="catalogue.html">Catalogue</a><a href="login.html">Login</a><a href="cart.html">Cart <span class="cart-count">0</span></a></nav>
+  </header>
+  <main class="auth-layout">
+    <aside class="auth-aside"><p class="eyebrow">BECOME A MEMBER</p><h1>Every great idea starts with a page.</h1><p>Build your personal journey through the world of engineering knowledge.</p><div class="auth-decoration" aria-hidden="true">R</div></aside>
+    <section class="auth-card" aria-labelledby="register-heading">
+      <p class="eyebrow">YOUR JOURNEY BEGINS</p><h2 id="register-heading">Create your account</h2><p class="muted">Fill in your details to try the registration demo.</p>
+      <form id="register-form" novalidate>
+        <label for="full-name">Full name</label><input id="full-name" name="fullName" type="text" autocomplete="name" required minlength="2" placeholder="Your full name">
+        <label for="register-email">Email address</label><input id="register-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <label for="register-password">Password</label><input id="register-password" name="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="password-help" placeholder="At least 8 characters"><small id="password-help" class="muted">Use at least 8 characters for this demo.</small>
+        <label for="confirm-password">Confirm password</label><input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required placeholder="Re-enter your password">
+        <button class="btn btn-gold btn-full" type="submit">Create Account</button><p id="register-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="auth-switch">Already registered? <a href="login.html">Sign in</a></p><p class="security-note">Demo only: no account is created, and credentials are not saved.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>&copy; <span data-year></span> RoyalReads</p></footer>
+</body>
+</html>
