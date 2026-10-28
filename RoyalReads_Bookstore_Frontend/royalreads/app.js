@@ -2,6 +2,7 @@
 
 /* RoyalReads front-end only. No backend, API calls, or authentication. */
 const CART_KEY = "royalreads-cart-v1";
+const BOOK_PRICES = { "book-001": 499, "book-002": 599, "book-003": 449, "book-004": 549 };
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 const formatINR = amount => new Intl.NumberFormat("en-IN", {
@@ -12,7 +13,8 @@ function readCart() {
   try {
     const parsed = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
     if (!Array.isArray(parsed)) return [];
-    return parsed.filter(item => item && typeof item.id === "string" &&
+    return parsed.map(item => item && BOOK_PRICES[item.id] !== undefined
+      ? { ...item, price: BOOK_PRICES[item.id] } : item).filter(item => item && typeof item.id === "string" &&
       typeof item.title === "string" && typeof item.author === "string" &&
       Number.isFinite(item.price) && item.price >= 0 &&
       Number.isInteger(item.quantity) && item.quantity >= 1 && item.quantity <= 99);

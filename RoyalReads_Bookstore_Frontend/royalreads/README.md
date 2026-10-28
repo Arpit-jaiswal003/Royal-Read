@@ -17,9 +17,9 @@ Responsive royal purple-and-gold engineering bookstore interface built with HTML
 3. Browse the catalogue and test cart interactions.
 
 ## Replace placeholders
-Replace `[BOOK_TITLE]`, `[AUTHOR_NAME]` and `[PRICE_RUPEES]` with verified book details. For each book card, update the visible title and author, `data-title`, `data-author`, `data-price`, and unique `data-book-id`.
+Replace `[BOOK_TITLE]` and `[AUTHOR_NAME]` with your book details. The four demo prices are ₹499, ₹599, ₹449, and ₹549. For each book card, keep the visible price, `data-price`, and the matching entry in `BOOK_PRICES` in `app.js` synchronized.
 
-`data-price` must be a numeric price in INR, without a currency symbol. For example, `data-price="450"`. Update the visible `₹[PRICE_RUPEES]` text too. Placeholder prices are currently zero for calculations.
+`data-price` and values in `BOOK_PRICES` must be numeric prices in INR, without a currency symbol. The cart total is calculated automatically as price × quantity. Existing cart items for these four demo books are also refreshed to the current demo prices.
 
 Use only original or licensed cover images if you add real covers. `[LOGO_URL]` is an optional placeholder if you later choose to use an image logo.
 
